@@ -1,0 +1,15 @@
+:root {
+    --dark_blue3: #0A3871;
+    --dark_grey5: #343A40;
+    --dark_grey4: #495057;
+    --grey: #D8DFE8;
+    --light_blue1: #F3F5FC;
+    --white: #FFFFFF;
+  }
+
+body {
+    background-color: var(--light_blue);
+    font-family: Inter, sans-serif;
+    border: 0;
+}
+
