@@ -1,44 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Text Decoder - Alura Challenge</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:slnt,wght@-10..0,100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:slnt,wght@-10..0,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
     <header>
-       
+      <img id="logo_alura" src="./images/logo_alura.png" />
     </header>
     <main>
-        <div class="container">
-            <div class="container_main">
-                <div class="logo">
-                    <img id="logo_alura" src="./images/logo_alura.png">
-                </div>
-                <div class="container_form">
-                        <textarea id="text_input" name="text_input" rows="4" cols="50">Digite seu texto</textarea>
-                        <div class="container_advisor">
-                            <img id="icon_exclamation" src="./images/icon_exclamation.png">
-                            <p class="text_advisor">Apenas letras minúsculas e sem acento.</p>
-                        </div>
-                        <div class="container_button">
-                            <button class="button_common button_criptografar" type="button" onclick="alert('Um momento! Estamos codificando sua mensagem')">Criptografar</button>
-                            <button class="button_common" type="button" onclick="alert('Descriptografando a sua imagem!')">Descriptografar</button>
-                        </div>     
-                </div>
+      <div class="container">
+        <div class="container_main">
+          <div class="container_form">
+            <textarea id="text_input" name="text_input" rows="12" cols="50">
+Digite seu texto        
+            </textarea>
+            <div>
+              <div class="container_advisor">
+                <img
+                  id="icon_exclamation"
+                  src="./images/icon_exclamation.png"
+                />
+                <p class="text_advisor">
+                  Apenas letras minúsculas e sem acento.
+                </p>
+              </div>
+              <div class="container_button">
+                <button
+                  id="button_action_criptografar"
+                  class="button_common"
+                  type="button"
+                  onclick="alert('Um momento! Estamos codificando sua mensagem')"
+                >
+                  Criptografar
+                </button>
+                <button
+                  id="button_action_descriptografar"
+                  class="button_common"
+                  type="button"
+                  onclick="alert('Descriptografando a sua imagem!')"
+                >
+                  Descriptografar
+                </button>
+              </div>
             </div>
-            <div class="container_output"> 
-                <p class="result_output">Resultado output</p>
-                <img id="image_output" src="./images/ilustration_output.png">
-                <h1 class="header_output">Nenhuma mensagem encontrada</h1>
-                <p class="text_output">Digite um texto que você deseja criptografar ou descriptografar.</p>
-                <button class="button_common" type="button" onclick="alert('Hello world!')">Copiar</button>
-            </div>
+          </div>
         </div>
+        <div class="container_output">
+          <p class="result_output">Resultado output</p>
+          <img id="image_output" src="./images/ilustration_output.png" />
+          <h1 class="header_output">Nenhuma mensagem encontrada</h1>
+          <p class="text_output">
+            Digite um texto que você deseja criptografar ou descriptografar.
+          </p>
+          <button
+            id="button_action_copiar"
+            class="button_common"
+            type="button"
+            onclick="alert('Hello world!')"
+          >
+            Copiar
+          </button>
+        </div>
+      </div>
     </main>
-</body>
+  </body>
 </html>

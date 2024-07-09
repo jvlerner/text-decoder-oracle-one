@@ -12,14 +12,20 @@ body {
     font-family: Inter, sans-serif;
     border: 0;
     margin: 0;
+    height: 100vh;
 }
 
-.logo {
-    
+header {
+    padding-left: 4em;
+    padding-top: 2em;
+    z-index: 1;
+}
+
+main {
+    z-index: 0;
 }
 
 .container {
-    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -36,18 +42,19 @@ body {
     flex-direction: column;
     align-items: left;
     max-width: 680px;
+    gap: 1em;
 }
 
 .container_advisor{
     display: flex;
     align-items: center;
+    gap: 0.5em;
 }
 
 .container_button{
     display: flex;
-    align-self: center;
-    gap: 1;
-    justify-content: center;
+    gap: 2em;
+    justify-content: left;
 }
 
 .container_output {
@@ -57,6 +64,8 @@ body {
     text-align: center;
     background-color: var(--white);
     border-radius: 32px;
+    max-width: 380px;
+    padding: 1em 1em;
 }
 
 .text_advisor{
@@ -65,35 +74,46 @@ body {
 }
 
 .result_output {
-    font-size: 24px;
+    display: none;
+    font-size: 2em;
     font-weight: 400;
 }
 
 .header_output {
-    font-size: 24px;
+    font-size: 2em;
     font-weight: 700;
 }
 
 .text_output {
-    font-size: 16px;
+    font-size: 1em;
     font-weight: 400;
+    padding-bottom: 5em;
 }
 
 .button_common {
-    padding: 24px 72px 24px 72px;
+    padding: 1.2rem 5rem;
     font-family: Inter, sans-serif;
     text-decoration: none;
     border: 1px solid var(--dark_blue3);
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 400;
     border-radius: 24px;
-
+    cursor: pointer;
 }
 
-.button_criptografar {
+#button_action_criptografar {
     color: var(--white);
     background-color: var(--dark_blue3);
 
+}
+
+#button_action_descriptografar {
+    background-color: transparent;
+}
+
+#button_action_copiar {
+    display: none;
+    background-color: transparent;
 }
 
 #logo_alura {
@@ -109,6 +129,7 @@ body {
 #image_output {
     width: 336px;
     height: 304px;
+    padding-top: 5em;
 }
 
 #text_input {
