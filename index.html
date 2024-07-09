@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Decoder - Alura Challenge</title>
+</head>
+<body>
+    <header>
+        <img id="logo_alura" src="./images/logo_alura.png">
+    </header>
+    <main>
+        <div class="container_form">
+                <textarea id="text_input" name="text_input" rows="4" cols="50">Digite seu texto</textarea>
+                <div class="container_advisor">
+                    <img id="icon_exclamation" src="./images/icon_exclamation.png">
+                    <p class="text_advisor">Apenas letras minúsculas e sem acento.</p>
+                </div>
+                <button type="button" onclick="alert('Um momento! Estamos codificando sua mensagem')">Criptografar</button>
+                <button type="button" onclick="alert('Descriptografando a sua imagem!')">Descriptografar</button>
+        </div>
+        <div class="container_output"> 
+            <p class="result_output">Resultado output</p>
+            <img id="image_output" src="./images/ilustration_output.png">
+            <h1 class="header_output">Nenhuma mensagem encontrada</h1>
+            <p class="text_output">Digite um texto que você deseja criptografar ou descriptografar.</p>
+            <button type="button" onclick="alert('Hello world!')">Click Me!</button>
+        </div>
+    </main>
+</body>
+</html>
