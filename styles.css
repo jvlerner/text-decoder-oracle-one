@@ -23,18 +23,28 @@ header {
 
 main {
     z-index: 0;
+    height: 100%;
 }
 
 .container {
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 3em;
+    justify-content: space-around;
+    gap: 1em;
+    height: 100%;
+}
+
+.container_logo {
+    align-self: flex-start;
+    padding-left: 2em;
+    padding-top: 2em;
+    padding-right: 1em;
 }
 
 .container_main {
     display: flex;
     flex-direction: column;
+    padding-top: 5em;
 }
 
 .container_form {
@@ -68,13 +78,16 @@ main {
     padding: 1em 1em;
 }
 
+.text_common {
+    cursor: default;
+}
+
 .text_advisor{
     font-size: 12px;
     font-weight: 400;
 }
 
 .result_output {
-    display: none;
     font-size: 2em;
     font-weight: 400;
 }
@@ -139,4 +152,14 @@ main {
     font-family: Inter, sans-serif;
     font-size: 36px;
     font-weight: 400;
+    padding: 0px;
+}
+
+#text_output {
+    display: none;
+}
+
+#text_input::after {
+    border: none;
+    padding: 0px;
 }

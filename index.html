@@ -13,23 +13,21 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <header>
-      <img id="logo_alura" src="./images/logo_alura.png" />
-    </header>
     <main>
       <div class="container">
+        <div class="container_logo">
+            <img id="logo_alura" src="/images/logo_alura.png" />
+        </div>
         <div class="container_main">
           <div class="container_form">
-            <textarea id="text_input" name="text_input" rows="12" cols="50">
-Digite seu texto        
-            </textarea>
+            <textarea required placeholder="Digite seu texto aqui" id="text_input" name="text_input" rows="12" cols="50"></textarea>
             <div>
               <div class="container_advisor">
                 <img
                   id="icon_exclamation"
-                  src="./images/icon_exclamation.png"
+                  src="/images/icon_exclamation.png"
                 />
-                <p class="text_advisor">
+                <p class="text_advisor text_common">
                   Apenas letras minúsculas e sem acento.
                 </p>
               </div>
@@ -37,16 +35,16 @@ Digite seu texto
                 <button
                   id="button_action_criptografar"
                   class="button_common"
-                  type="button"
-                  onclick="alert('Um momento! Estamos codificando sua mensagem')"
+                  type="submit"
+                  onclick="criptografar()"
                 >
                   Criptografar
                 </button>
                 <button
                   id="button_action_descriptografar"
                   class="button_common"
-                  type="button"
-                  onclick="alert('Descriptografando a sua imagem!')"
+                  type="submit"
+                  onclick="descriptografar()"
                 >
                   Descriptografar
                 </button>
@@ -55,17 +53,17 @@ Digite seu texto
           </div>
         </div>
         <div class="container_output">
-          <p class="result_output">Resultado output</p>
-          <img id="image_output" src="./images/ilustration_output.png" />
-          <h1 class="header_output">Nenhuma mensagem encontrada</h1>
-          <p class="text_output">
+          <p id="text_output" class="result_output">Resultado output</p>
+          <img id="image_output" src="/images/ilustration_output.png" />
+          <h1 class="header_output text_common">Nenhuma mensagem encontrada</h1>
+          <p class="text_output text_common">
             Digite um texto que você deseja criptografar ou descriptografar.
           </p>
           <button
             id="button_action_copiar"
             class="button_common"
             type="button"
-            onclick="alert('Hello world!')"
+            onclick=""
           >
             Copiar
           </button>
@@ -73,4 +71,5 @@ Digite seu texto
       </div>
     </main>
   </body>
+  <script src="index.js"></script>
 </html>
