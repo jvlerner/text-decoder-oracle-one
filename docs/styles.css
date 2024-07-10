@@ -175,26 +175,32 @@ main {
 #button_action_criptografar {
   color: var(--white);
   background-color: var(--dark_blue3);
+  transition: filter 1s ease 1s;
 }
 
-#button_action_criptografar:hover {
+#button_action_criptografar:active {
   background-color: var(--dark_blue4);
+  transition: filter 0s;
 }
 
 #button_action_descriptografar {
   background-color: transparent;
+  transition: filter 1s ease 1s;
 }
 
-#button_action_descriptografar:hover {
-  background-color: rgba(230, 218, 218, 0.245);
-}
-
-#button_action_copy:hover {
-  background-color: rgba(230, 218, 218, 0.245);
+#button_action_descriptografar:active {
+  background-color: #dfe6ff;
+  transition: filter 0s;
 }
 
 #button_action_copy {
   background-color: transparent;
+  transition: filter 1s ease 1s;
+}
+
+#button_action_copy:active {
+  background-color: var(--grey);
+  transition: filter 0s;
 }
 
 #logo_alura {

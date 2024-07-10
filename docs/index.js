@@ -62,7 +62,7 @@ function decodeText() {
     return;
   }
 
-  if (validateText == true || validadeLowerCase == false) {
+  if (validateText == true) {
     alert("O texto deve conter apenas letras minúsculas e sem acento!");
     text_input.focus();
     return;
