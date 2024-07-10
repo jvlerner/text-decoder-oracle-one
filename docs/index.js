@@ -1,4 +1,4 @@
-const regex = new RegExp(/[^a-z0-9\s{0,}]/); 
+const regex = new RegExp(/[^a-z0-9\s{0,}]/gm); 
 const text_input = document.getElementById("text_input");
 const text_output = document.getElementById("text_output");
 const handler_output = document.getElementById("container_handler_output");
