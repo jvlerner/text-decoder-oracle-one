@@ -10,24 +10,19 @@ function encodeText() {
   text = text.toString();
   // check string is lowercase and dont has special caracters
   let validateText = regex.test(text);
-  let textLowerCase = text.toLowerCase();
-  let validadeLowerCase = textLowerCase == text ? true : false;
   // set default handler for container
   handler_output.style.display = "flex";
   result_output.style.display = "none";
 
-  console.log("Text " + text);
-  console.log("Regex " + validateText);
-
   if (text == "" || text == "undefined" || text == null || text == "null") {
-    alert("Você deve digitar um texto para criptografar!");
     text_input.focus();
+    myAlert("Você deve digitar um texto para criptografar!");
     return;
   }
 
-  if (validateText == true || validadeLowerCase == false) {
-    alert("O texto deve conter apenas letras minúsculas e sem acento!");
+  if (validateText == true) {
     text_input.focus();
+    myAlert("O texto deve conter apenas letras minúsculas e sem acento!");
     return;
   }
 
@@ -57,14 +52,14 @@ function decodeText() {
   result_output.style.display = "none";
 
   if (text == "" || text == "undefined" || text == null || text == "null") {
-    alert("Você deve digitar um texto para descriptografar!");
     text_input.focus();
+    myAlert("Você deve digitar um texto para descriptografar!");
     return;
   }
 
   if (validateText == true) {
-    alert("O texto deve conter apenas letras minúsculas e sem acento!");
     text_input.focus();
+    myAlert("O texto deve conter apenas letras minúsculas e sem acento!");
     return;
   }
 
@@ -86,4 +81,8 @@ function decodeText() {
 function copyText() {
   let copyText = text_output.innerText;
   navigator.clipboard.writeText(copyText);
+}
+
+function myAlert(text){
+    alert(text)
 }

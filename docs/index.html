@@ -18,62 +18,68 @@
         <div class="container_logo">
           <img id="logo_alura" src="./images/logo_alura.png" />
         </div>
-        <div class="container_form">
-          <textarea
-            required
-            placeholder="Digite seu texto aqui"
-            id="text_input"
-          ></textarea>
-          <div>
-            <div class="container_advisor">
-              <img id="icon_exclamation" src="./images/icon_exclamation.png" />
-              <p class="text_advisor text_common">
-                Apenas letras minúsculas e sem acento.
-              </p>
-            </div>
-            <div class="container_button">
-              <button
-                id="button_action_criptografar"
-                class="button_common"
-                type="submit"
-                onclick="encodeText()"
-              >
-                Criptografar
-              </button>
-              <button
-                id="button_action_descriptografar"
-                class="button_common"
-                type="submit"
-                onclick="decodeText()"
-              >
-                Descriptografar
-              </button>
+        <div class="container_handler_form">
+          <div class="container_form">
+            <textarea
+              required
+              placeholder="Digite seu texto aqui"
+              id="text_input"
+            ></textarea>
+            <div>
+              <div class="container_advisor">
+                <img id="icon_exclamation" src="./images/icon_exclamation.png" />
+                <p class="text_advisor text_common">
+                  Apenas letras minúsculas e sem acento.
+                </p>
+              </div>
+              <div class="container_button">
+                <button
+                  id="button_action_criptografar"
+                  class="button_common"
+                  type="submit"
+                  onclick="encodeText()"
+                >
+                  Criptografar
+                </button>
+                <button
+                  id="button_action_descriptografar"
+                  class="button_common"
+                  type="submit"
+                  onclick="decodeText()"
+                >
+                  Descriptografar
+                </button>
+              </div>
             </div>
           </div>
         </div>
-
-        <div class="container_output">
-          <div id="container_handler_output">
-            <img id="image_output" src="./images/ilustration_output.png" />
-            <h1 id="header_output" class="header_output text_common">
-              Nenhuma mensagem encontrada
-            </h1>
-            <p id="text_handler_output" class="text_handler_output text_common">
-              Digite um texto que você deseja criptografar ou descriptografar.
-            </p>
-          </div>
-          <div id="container_result_output">
-            <div>
-              <p id="text_output" class="result_output"></p>
+        <div class="container_handler_output">
+          <div class="container_output">
+            <div id="container_handler_output">
+              <img id="image_output" src="./images/ilustration_output.png" />
+              <h1 id="header_output" class="header_output text_common">
+                Nenhuma mensagem encontrada
+              </h1>
+              <p
+                id="text_handler_output"
+                class="text_handler_output text_common"
+              >
+                Digite um texto que você deseja criptografar ou descriptografar.
+              </p>
             </div>
-            <button
-              id="button_action_copy"
-              class="button_common"
-              type="button"
-              onclick="copyText()"
-            >
-              Copiar
-            </button>
+            <div id="container_result_output">
+              <div>
+                <p id="text_output" class="result_output"></p>
+              </div>
+              <button
+                id="button_action_copy"
+                class="button_common"
+                type="button"
+                onclick="copyText()"
+              >
+                Copiar
+              </button>
+            </div>
           </div>
         </div>
       </div>
