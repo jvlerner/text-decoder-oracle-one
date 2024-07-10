@@ -42,18 +42,14 @@ main {
     padding-right: 1em;
 }
 
-.container_main {
-    display: flex;
-    flex-direction: column;
-    padding-top: 5em;
-}
-
 .container_form {
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
+    width: 50%;
+    height: 70%;
     align-items: left;
     max-width: 680px;
-    gap: 1em;
 }
 
 .container_advisor{
@@ -149,6 +145,7 @@ main {
 }
 
 #text_input {
+    display: flex;
     background-color: transparent;
     text-decoration: none;
     border: none;
@@ -157,17 +154,22 @@ main {
     font-weight: 400;
     padding: 0px;
     color: var(--dark_blue3);
+    width: 100%;
+    height: 100%;
+    max-width: 680px;
+    max-height: 528px;
 }
 
 #text_output {
     display: flex;
-    word-break: break-all;
+    word-break: break-word;
+    white-space: pre-wrap;
     color: var(--dark_grey4);
 }
 
 #text_input:hover {
-    border: 0px;
-    padding: 0px;
+    border: none;
+    padding: none;
 }
 
 #container_handler_output{
