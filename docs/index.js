@@ -6,8 +6,7 @@ const result_output = document.getElementById("container_result_output");
 
 function encodeText() {
   // get text of textarea
-  let text = ""
-  text= text_input.value;
+  let text = text_input.value;
   text = text.toString();
   // check string is lowercase and dont has special caracters
   let validateText = regex.test(text.normalize("NFD"));
@@ -47,7 +46,7 @@ function decodeText() {
   let text = text_input.value;
   text = text.toString();
   // check string is lowercase and dont has special caracters
-  let validateText = regex.test(text);
+  let validateText = regex.test(text.normalize("NFD"));
   // set default handler for container
   handler_output.style.display = "flex";
   result_output.style.display = "none";
