@@ -9,10 +9,14 @@ function encodeText() {
   let text = text_input.value;
   text = text.toString();
   // check string is lowercase and dont has special caracters
-  let validateText = regex.test(text);
+  let validateText = regex.test(text.normalize("NFD"));
   // set default handler for container
   handler_output.style.display = "flex";
   result_output.style.display = "none";
+
+  console.log("text: "+ text.normalize("NFD"))
+  console.log("validate: "+validateText)
+  console.log("---------------")
 
   if (text == "" || text == "undefined" || text == null || text == "null") {
     text_input.focus();
