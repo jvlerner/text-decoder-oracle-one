@@ -36,7 +36,7 @@
                   id="button_action_criptografar"
                   class="button_common"
                   type="submit"
-                  onclick="criptografar()"
+                  onclick="encodeText()"
                 >
                   Criptografar
                 </button>
@@ -44,7 +44,7 @@
                   id="button_action_descriptografar"
                   class="button_common"
                   type="submit"
-                  onclick="descriptografar()"
+                  onclick="decodeText()"
                 >
                   Descriptografar
                 </button>
@@ -53,20 +53,24 @@
           </div>
         </div>
         <div class="container_output">
-          <p id="text_output" class="result_output">Resultado output</p>
-          <img id="image_output" src="/images/ilustration_output.png" />
-          <h1 class="header_output text_common">Nenhuma mensagem encontrada</h1>
-          <p class="text_output text_common">
-            Digite um texto que você deseja criptografar ou descriptografar.
-          </p>
-          <button
-            id="button_action_copiar"
-            class="button_common"
-            type="button"
-            onclick=""
-          >
-            Copiar
-          </button>
+          <div id="container_handler_output">
+            <img id="image_output" src="/images/ilustration_output.png" />
+            <h1 id="header_output" class="header_output text_common">Nenhuma mensagem encontrada</h1>
+            <p id="text_handler_output" class="text_handler_output text_common">
+              Digite um texto que você deseja criptografar ou descriptografar.
+            </p>
+          </div>
+          <div id="container_result_output">
+            <p id="text_output" class="result_output">Resultado output</p>
+            <button
+              id="button_action_copy"
+              class="button_common"
+              type="button"
+              onclick="copyText()"
+            >
+              Copiar
+            </button>
+          </div>
         </div>
       </div>
     </main>

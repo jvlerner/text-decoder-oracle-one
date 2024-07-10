@@ -32,6 +32,7 @@ main {
     justify-content: space-around;
     gap: 1em;
     height: 100%;
+    flex-wrap: wrap;
 }
 
 .container_logo {
@@ -71,11 +72,13 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     text-align: center;
     background-color: var(--white);
     border-radius: 32px;
-    max-width: 380px;
-    padding: 1em 1em;
+    height: 90%;
+    width: 380px;
+    padding: 2em 2ch;
 }
 
 .text_common {
@@ -97,7 +100,7 @@ main {
     font-weight: 700;
 }
 
-.text_output {
+.text_handler_output {
     font-size: 1em;
     font-weight: 400;
     padding-bottom: 5em;
@@ -153,13 +156,40 @@ main {
     font-size: 36px;
     font-weight: 400;
     padding: 0px;
+    color: var(--dark_blue3);
 }
 
 #text_output {
-    display: none;
+    display: flex;
+    word-break: break-all;
+    color: var(--dark_grey4);
 }
 
-#text_input::after {
-    border: none;
+#text_input:hover {
+    border: 0px;
     padding: 0px;
 }
+
+#container_handler_output{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+    
+}
+
+#container_result_output{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    height: 100%;
+}
+
+#button_action_copy {
+    background-color: transparent;
+}
+
