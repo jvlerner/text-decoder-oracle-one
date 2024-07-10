@@ -15,10 +15,9 @@ function encodeText() {
   handler_output.style.display = "flex";
   result_output.style.display = "none";
 
-  if (text == "" || text == "undefined" || text == null || text == "null") {
+  if (!text) {
     text_input.focus();
-    myAlert("Você deve digitar um texto para criptografar! "+regex.lastIndex());
-   
+    myAlert("Você deve digitar um texto para criptografar!");
     return;
   }
 
@@ -53,7 +52,7 @@ function decodeText() {
   handler_output.style.display = "flex";
   result_output.style.display = "none";
 
-  if (text == "" || text == "undefined" || text == null || text == "null") {
+  if (!text) {
     text_input.focus();
     myAlert("Você deve digitar um texto para descriptografar!");
     return;
