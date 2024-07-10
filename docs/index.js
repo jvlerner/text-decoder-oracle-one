@@ -1,6 +1,5 @@
 
-const re = /([a-z0-9])\s/g;
-
+const regex = /[^a-z0-9\s{0,}]/gm;
 const text_input = document.getElementById("text_input");
 const text_output = document.getElementById("text_output")
 const handler_output = document.getElementById("container_handler_output")
@@ -11,7 +10,7 @@ function encodeText() {
     let text = text_input.value;
     text = text.toString();
     // check string is lowercase and dont has special caracters
-    let validateText = re.test(text);
+    let validateText = regex.test(text);
     let textLowerCase = text.toLowerCase()
     let validadeLowerCase = textLowerCase == text ? true : false;
     // set default handler for container
@@ -20,8 +19,6 @@ function encodeText() {
 
     console.log("Text "+text);
     console.log("Regex "+validateText);
-    console.log("Text-LowerCase "+textLowerCase);
-    console.log("Boolean "+validadeLowerCase);
 
     if (text == "" || text == "undefined" || text == null || text == "null") {
         alert("Você deve digitar um texto para criptografar!");
@@ -29,17 +26,13 @@ function encodeText() {
         return
     }
 
-    if (validateText == false || validadeLowerCase == false ) {
+    if (validateText == true || validadeLowerCase == false ) {
         alert("O texto deve conter apenas letras minúsculas e sem acento!");
         text_input.focus();
         return
     }
 
-    if (validateText == true && validadeLowerCase == true) {
-        console.log("Text "+text);
-        console.log("Regex "+validateText);
-        console.log("Text-LowerCase "+textLowerCase);
-        console.log("Boolean "+validadeLowerCase);
+    if (validateText == false) {
         text = text.replaceAll("e", "enter");
         text = text.replaceAll("i", "imes");
         text = text.replaceAll("a", "ai");
@@ -60,35 +53,24 @@ function decodeText() {
     let text = text_input.value;
     text = text.toString();
     // check string is lowercase and dont has special caracters
-    let validateText = re.test(text);
-    let textLowerCase = text.toLowerCase()
-    let validadeLowerCase = textLowerCase == text ? true : false;
+    let validateText = regex.test(text);
     // set default handler for container
     handler_output.style.display = "flex";
     result_output.style.display = "none";
 
-    console.log("Text "+text);
-    console.log("Regex "+validateText);
-    console.log("Text-LowerCase "+textLowerCase);
-    console.log("Boolean "+validadeLowerCase);
-
-    if (text == "" || text == "undefined" || text == null || text == "null") {
-        alert("Você deve digitar um texto para criptografar!");
+    if ( text == "" || text == "undefined" || text == null || text == "null" ) {
+        alert("Você deve digitar um texto para descriptografar!");
         text_input.focus();
         return
     }
 
-    if (validateText == false || validadeLowerCase == false ) {
+    if ( validateText == true || validadeLowerCase == false ) {
         alert("O texto deve conter apenas letras minúsculas e sem acento!");
         text_input.focus();
         return
     }
 
-    if (validateText == true && validadeLowerCase == true) {
-        console.log("Text "+text);
-        console.log("Regex "+validateText);
-        console.log("Text-LowerCase "+textLowerCase);
-        console.log("Boolean "+validadeLowerCase);
+    if ( validateText == false ) {
         text = text.replaceAll("enter", "e");
         text = text.replaceAll("imes", "i");
         text = text.replaceAll("ai", "a");
