@@ -72,12 +72,12 @@ main {
 }
 
 .container_handler_form {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 85%;
-    width: 680px;
-  }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 85%;
+  width: 680px;
+}
 
 .container_output {
   display: flex;
@@ -104,7 +104,6 @@ main {
 }
 
 .result_output {
-  padding: 0 6px 0 6px;
   font-size: 2em;
   font-weight: 400;
 }
@@ -151,6 +150,13 @@ main {
   width: 100%;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+#container_text_output {
+  overflow: auto;
+  padding: 0px 6px 0 6px;
+  margin: 2em 0 2em 0;
+  border-radius: 36px;
 }
 
 #text_input {
