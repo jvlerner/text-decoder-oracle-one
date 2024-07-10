@@ -1,4 +1,4 @@
-const regex = /[^a-z0-9\s{0,}]/;
+const regex = new RegExp(/[^a-z0-9\s{0,}]/); 
 const text_input = document.getElementById("text_input");
 const text_output = document.getElementById("text_output");
 const handler_output = document.getElementById("container_handler_output");
@@ -8,6 +8,7 @@ function encodeText() {
   // get text of textarea
   let text = text_input.value;
   text = text.toString();
+  regex.lastIndex(0)
   // check string is lowercase and dont has special caracters
   let validateText = regex.test(text.normalize("NFD"));
   // set default handler for container
