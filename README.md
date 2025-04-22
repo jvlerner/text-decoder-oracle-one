@@ -1,4 +1,4 @@
-﻿# Codificador e Descodificador de Texto WEB - Alura & ONE
+﻿# Codificador e Descodificador de Texto WEB - Alura & Oracle ONE
 
 ## Sobre este projeto 💻
 - É um projeto ofertado no curso de JavaScript da Alura
